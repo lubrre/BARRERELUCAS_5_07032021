@@ -73,7 +73,7 @@ const displayProduct = (product) =>{
     });
 
     const $productQuantity = document.createElement ("select");
-    $productPage.appendChild ($productQuantity)
+    $productPage.appendChild ($productQuantity);
     
     for (let i = 1; i < 11; i++) {
         const $optionQuantity = document.createElement ('option');
@@ -82,10 +82,16 @@ const displayProduct = (product) =>{
         $productQuantity.appendChild($optionQuantity)
     }
 
-    const $productBtn = document.createElement ('button')
-    $productPage.appendChild ($productBtn)
-    $productBtn.innerHTML = 'ajouter au panier'
+    const $productBtn = document.createElement ('button');
+    $productPage.appendChild ($productBtn);
+    $productBtn.innerHTML = 'ajouter au panier';
+    $productBtn.addEventListener ('click', ()=>{
+        window.location.href = 'order.html'
+    });
+
 
     console.log(product)
+
+
 
 }

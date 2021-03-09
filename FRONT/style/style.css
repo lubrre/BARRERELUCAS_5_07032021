@@ -183,6 +183,7 @@ h1{
 /* product page */
 
 .product_page{
+    height: 700px;
     position: relative;
     align-items: center;
     display: flex;
