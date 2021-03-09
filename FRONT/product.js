@@ -86,7 +86,7 @@ const displayProduct = (product) =>{
     $productPage.appendChild ($productBtn);
     $productBtn.innerHTML = 'ajouter au panier';
     $productBtn.addEventListener ('click', ()=>{
-        window.location.href = 'order.html'
+        window.location.href = 'cart.html'
     });
 
 
