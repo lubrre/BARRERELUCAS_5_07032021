@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confimation de commande - Orinoco</title>
-    <link rel="stylesheet" href="resetstyle.css"/>
+    <link href="resetstyle.css"/>
     <link rel="stylesheet" href="style/style.css"/>
     <script src="https://kit.fontawesome.com/1e3ca0120d.js" crossorigin="anonymous"></script>
 </head>
@@ -20,33 +20,15 @@
     <a href="./index.html"><i class="fas fa-arrow-left"></i></a>
     <!-- cart -->
 
-    <section class="cart_page">
-        <h2 class="order_name_page">Confirmation de Commande</h2>
-        <div class="order_card_page">
-            <div class="order_element_page_left">
-                <div class="img_1_order"></div>
-                <div class="order_product_info">
-                    <p class="order_product_page">Produit 1</p>
-                    <p class="order_price_page_left">75€</p>
-                </div>
-            </div>
-
-                <div class="order_price_cart_right">
-                    <div class="order_price_cart">
-                        <p class="order_price_page">Adresse de livraison : <span>Quai de rive neuve, 13007 Marseille</span></p>
-                        <p class="order_price_page">Date d'arrivée (estimation) : <span>10 Avril</span></p>
-                    </div>
-                    <div class="order_price_cart">
-                        <p class="order_price_page">N° Commande : <span>00000000001</span></p>
-                        <p class="order_price_page">Réglé par : <span>Carte bancaire</span></p>
-                    </div>
-                </div>
-
-            
+    <section class="order">
+        <h2 class="order_name_page">Order Confimation</h2>
+        <p class="order_sentence">Thank you for shopping with Orinoco</p>
+        <div class="order_confirmation">
+            <p class="order_title">Order Number :</p>
+            <p class="order_number" id="order_number"></p>
         </div>
-        
     </section>
 
-
+    <script src="order.js"></script>
  
 </body>

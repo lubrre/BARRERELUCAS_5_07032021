@@ -58,7 +58,7 @@ const displayProduct = (product) =>{
     $productElementPage.appendChild($productDescription);
     const $productPrice = document.createElement ('p');
     $productPrice.className = 'product_price_page';
-    $productPrice.innerText = product.price
+    $productPrice.innerText = product.price;
     $productElementPage.appendChild($productPrice);
 
     const $productSelectLens = document.createElement ("select");
@@ -83,15 +83,38 @@ const displayProduct = (product) =>{
     }
 
     const $productBtn = document.createElement ('button');
+    $productBtn.className = "product_button";
     $productPage.appendChild ($productBtn);
-    $productBtn.innerHTML = 'ajouter au panier';
+    $productBtn.innerHTML = 'Add to Cart';
     $productBtn.addEventListener ('click', ()=>{
+        addToBasket(product, $productQuantity.value, $productSelectLens.value);
         window.location.href = 'cart.html'
     });
 
+    
 
-    console.log(product)
+    // console.log(product)
 
+}
 
+const addToBasket = (camera, quantity, lens)=>{
+    const cameraToSave = {
+        _id : camera._id,
+        name : camera.name,
+        price : camera.price,
+        quantity : quantity,
+        lens : lens,
+        img : camera.imageUrl,
+    };
 
+    let storage = localStorage.getItem ('orinoco_p5_lucas');
+
+    if(!storage){
+        storage = [];
+    }else{
+        storage = JSON.parse(storage);
+    }
+    storage.push(cameraToSave);
+    
+    localStorage.setItem('orinoco_p5_lucas', JSON.stringify(storage));
 }
