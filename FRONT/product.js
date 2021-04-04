@@ -73,6 +73,7 @@ const displayProduct = (product) =>{
     });
 
     const $productQuantity = document.createElement ("select");
+    $productQuantity.className = "quantity_button";
     $productPage.appendChild ($productQuantity);
     
     for (let i = 1; i < 11; i++) {

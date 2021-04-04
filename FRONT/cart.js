@@ -89,7 +89,7 @@ const displayProductInBasket = (product, index) => {
     const $basketRemoveItem = document.createElement('button');
     $basketElementPage.appendChild($basketRemoveItem);
     $basketRemoveItem.className = 'cart_remove_item';
-    $basketRemoveItem.innerText = 'Supprimer du panier';
+    $basketRemoveItem.innerText = 'remove item';
     $basketRemoveItem.addEventListener('click', ()=>{
         basket.splice(index, 1);
         basket = basket.map((product, index)=>{
